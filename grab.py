@@ -2,8 +2,6 @@ from bs4 import BeautifulSoup
 import requests
 
 
-
-
 req = requests.get("https://www.marketwatch.com/latest-news")
 soup = BeautifulSoup(req.text, "lxml")
 for link in soup.find_all("a"):
